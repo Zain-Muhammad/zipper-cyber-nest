@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en" x-data="zipperApp()" x-init="init()">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zipper</title>
+    <link rel="stylesheet" href="assets/styles/navbar.css">
+    <link rel="stylesheet" href="assets/styles/landing-page.css">
+    <link rel="icon" type="image/png" href="assets/images/company-logo.png">
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="modern-navbar container">
+        <div class="wrapper">
+            <div class="nav-wrapper-inner">
+                <div class="left-nav-wrapper">
+                    <a href="/" class="logo">
+                        <img fetchpriority="high" width="100" height="36" src="assets/images/company-logo.png" alt="company logo">
+                    </a>
+                    <input type="radio" name="slider" id="menu-btn">
+                    <input type="radio" name="slider" id="close-btn">
+                    <ul class="nav-links">
+                    <label for="close-btn" class="btn close-btn">
+                        <a href="/" class="logo">
+                            <img fetchpriority="high" width="100" height="36" src="assets/images/company-logo.png" alt="company logo">
+                        </a>
+                        <svg width="30" height="30" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.0083 5.00977L57.3342 57.3357" stroke="#0B0D14" stroke-width="9" stroke-linecap="round"/>
+                        <path d="M5 57.3262L57.3259 5.00027" stroke="#0B0D14" stroke-width="9" stroke-linecap="round"/>
+                        </svg>
+                    </label>
+                    <li>
+                        <a href="#" class="desktop-item">Software categories
+                            <svg width="9" height="10" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17 2L9.85714 11L2 2" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <input type="checkbox" id="showMega" class="showMega" name="showMega">
+                        <label for="showMega" class="mobile-item">Software categories
+                            <svg width="9" height="10" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17 2L9.85714 11L2 2" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </label>
+                        <div class="mega-box">
+                        <div class="content">
+                            <div class="row">
+                            <header>Explore Software categories 
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14 18L12.6 16.55L16.15 13H4V11H16.15L12.6 7.45L14 6L20 12L14 18Z" fill="#203462"/>
+                                </svg>
+                            </header>
+                            <ul class="mega-links">
+                                <li><a href="/">Zendesk</a></li>
+                                <li><a href="/">Dropbox</a></li>
+                                <li><a href="/">Asana</a></li>
+                            </ul>
+                            </div>
+                        </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/" class="updates">Updates
+                            <div class="pulse"></div>
+                        </a>
+                    </li>
+                    <li><a href="/">Resources</a></li>
+                    <li><a href="/">About us</a></li>
+                    </ul>
+                    <ul class="nav-links login-signup-btns">
+                        <li><a href="/" class="login-btn">Login</a></li>
+                        <li><a href="/" class="signup-btn">Sign Up</a></li>
+                    </ul>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="/" class="login-btn">Login</a></li>
+                    <li><a href="/" class="signup-btn">Sign Up</a></li>
+                </ul>
+            </div>
+            <label for="menu-btn" class="btn menu-btn">
+                <svg width="40" height="40" viewBox="0 0 85 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.45459 5H80" stroke="#0B0D14" stroke-width="9" stroke-linecap="round"/>
+                <path d="M5.45459 23.9092H64.5455" stroke="#0B0D14" stroke-width="9" stroke-linecap="round"/>
+                <path d="M2.90909 53.7275V37.8184H6.68182L10.8636 44.5457L15.0455 37.8184H18.8182V53.7275H15.3409V43.3412L10.8636 50.1366H10.7727L6.34091 43.4094V53.7275H2.90909ZM25.5946 53.7275V37.8184H37.5946V40.9321H29.0719V44.1594H36.5719V47.273H29.0719V50.6139H37.7083V53.7275H25.5946ZM43.7747 53.7275V37.8184H47.002L54.4565 47.6139V37.8184H57.911V53.7275H54.9338L47.2292 43.6139V53.7275H43.7747ZM71.321 53.9775C67.0483 53.9775 64.4347 51.5912 64.4347 46.9094V37.8184H67.9347V46.8184C67.9347 49.4094 69.2301 50.7503 71.3665 50.7503C73.5028 50.7503 74.7983 49.4548 74.7983 46.9321V37.8184H78.2983V46.7957C78.2983 51.6139 75.5938 53.9775 71.321 53.9775Z" fill="#0B0D14"/>
+                </svg>
+            </label>
+        </div>
+    </nav>
+    <!-- navbar -->
+    <!-- hero section -->
+    <section class="hero container">
+        <h1 class="hero-title">Where leading company find best software</h1>
+        <label class="zipper-search">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
+                <path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="#2D2D2D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M17.5 17.5L13.875 13.875" stroke="#2D2D2D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            <input type="search" placeholder="Enter product, categories, service name..." class="zipper-search-input"
+            x-model="searchQuery" @input.debounce.400ms="filterProducts" />
+            <button class="zipper-search-button" @click="filterProducts">Search</button>
+        </label>
+        <img src="assets/images/star-left.png" alt="star left" class="star star-left">
+        <img src="assets/images/star-right.png" alt="star right" class="star star-right">
+    </section>
+    <!-- hero section -->
+    <!-- Filters -->
+    <section class="popular-products container">
+        <h2 class="popular-section-title">Popular Products</h2>
+        <div class="filter-wrapper">
+            <select class="zipper-filter" x-model="selectedCategory" @change="filterProducts">
+                <option value="">Categories</option>
+                <template x-for="cat in categories" :key="cat">
+                    <option x-text="cat"></option>
+                </template>
+            </select>
+            <select class="zipper-filter" x-model="selectedService" @change="filterProducts">
+                <option value="">Services</option>
+                <template x-for="srv in services" :key="srv">
+                    <option x-text="srv"></option>
+                </template>
+            </select>
+            <select class="zipper-filter" x-model="selectedBudget" @change="filterProducts">
+                <option value="">Budget</option>
+                <template x-for="b in budgets" :key="b">
+                    <option x-text="b"></option>
+                </template>
+            </select>
+            <select class="zipper-filter">
+                <option  value="">Rated</option>
+                <option  value="1">Rated 1</option>
+                <option  value="2">Rated 2</option>
+            </select>
+            <select class="zipper-filter">
+                <option  value="">Industry</option>
+                <option  value="1">Industry 1</option>
+                <option  value="2">Industry 2</option>
+            </select>
+        </div>
+    </section>
+    <!-- Product List -->
+    <section class="products-list container">
+        <!-- Loader -->
+        <template x-if="loading">
+        <div class="spinner"></div>
+        </template>
+
+        <!-- No results -->
+        <template x-if="!loading && filteredProducts.length === 0">
+        <div class="no-results">No relevant product found.</div>
+        </template>
+
+        <!-- Products -->
+        <template x-for="(product, index) in filteredProducts" :key="product.name">
+        <div class="list-items-inner">
+            <details class="product-item">
+                <summary class="product-summary">
+                    <div class="product-intials-wrapper">
+                        <div class="product-order" x-text="index + 1"></div>
+                        <div class="product-img-wrapper">
+                            <img :src="product.image" alt="product img" class="product-img">
+                        </div>
+                        <div class="product-detail-wrapper">
+                            <div class="product-name" x-text="product.name"></div>
+                            <div class="product-rating-wrapper">
+                                <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.00033 14.275L4.85033 16.775C4.667 16.8916 4.47533 16.9416 4.27533 16.9249C4.07533 16.9083 3.90033 16.8416 3.75033 16.725C3.60033 16.6083 3.48366 16.4623 3.40033 16.287C3.317 16.1116 3.30033 15.916 3.35033 15.7L4.45033 10.975L0.775329 7.79995C0.608662 7.64995 0.504662 7.47895 0.463329 7.28695C0.421996 7.09495 0.434329 6.90762 0.500329 6.72495C0.566996 6.54162 0.666995 6.39162 0.800329 6.27495C0.933662 6.15828 1.117 6.08328 1.35033 6.04995L6.20033 5.62495L8.07533 1.17495C8.15866 0.974952 8.288 0.824951 8.46333 0.724951C8.63866 0.624951 8.81766 0.574951 9.00033 0.574951C9.18366 0.574951 9.36266 0.624951 9.53733 0.724951C9.712 0.824951 9.84133 0.974952 9.92533 1.17495L11.8003 5.62495L16.6503 6.04995C16.8837 6.08328 17.067 6.15828 17.2003 6.27495C17.3337 6.39162 17.4337 6.54162 17.5003 6.72495C17.567 6.90829 17.5797 7.09595 17.5383 7.28795C17.497 7.47995 17.3927 7.65062 17.2253 7.79995L13.5503 10.975L14.6503 15.7C14.7003 15.9166 14.6837 16.1126 14.6003 16.288C14.517 16.4633 14.4003 16.609 14.2503 16.725C14.1003 16.8416 13.9253 16.9083 13.7253 16.9249C13.5253 16.9416 13.3337 16.8916 13.1503 16.775L9.00033 14.275Z" fill="#F3B146"/>
+                                </svg>
+                                <div class="rating-number">
+                                    4.4
+                                </div>
+                                <div class="rating-count">
+                                    3.6k Reviews
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-price" x-text="product.price"></div>
+                    <div class="product-category" x-text="product.category"></div>
+                    <div class="other-wrapper">
+                        <div class="other-items-wrapper no-toggle">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 11.501C21.0034 12.8209 20.6951 14.1229 20.1 15.301C19.3944 16.7128 18.3098 17.9002 16.9674 18.7303C15.6251 19.5604 14.0782 20.0004 12.5 20.001C11.1801 20.0044 9.87812 19.6961 8.7 19.101L3 21.001L4.9 15.301C4.30493 14.1229 3.99656 12.8209 4 11.501C4.00061 9.92276 4.44061 8.37586 5.27072 7.03356C6.10083 5.69125 7.28825 4.60657 8.7 3.90101C9.87812 3.30594 11.1801 2.99756 12.5 3.00101H13C15.0843 3.116 17.053 3.99577 18.5291 5.47186C20.0052 6.94796 20.885 8.91666 21 11.001V11.501Z" stroke="#0B0D14" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="other-items-wrapper no-toggle">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 21.001V5.00098C19 3.89641 18.1046 3.00098 17 3.00098H7C5.89543 3.00098 5 3.89641 5 5.00098V21.001M19 21.001L21 21.0009M19 21.001H14M5 21.001L3 21.0009M5 21.001H10M9 7.00095H10M9 11.001H10M14 7.00095H15M14 11.001H15M10 21.001V16.001C10 15.4487 10.4477 15.001 11 15.001H13C13.5523 15.001 14 15.4487 14 16.001V21.001M10 21.001H14" stroke="#111827" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="other-items-wrapper no-toggle">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 22.001C17.5228 22.001 22 17.5238 22 12.001C22 6.47813 17.5228 2.00098 12 2.00098C6.47715 2.00098 2 6.47813 2 12.001C2 17.5238 6.47715 22.001 12 22.001Z" stroke="#0B0D14" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 12.001H22" stroke="#0B0D14" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 2.00098C14.5013 4.73933 15.9228 8.29301 16 12.001C15.9228 15.7089 14.5013 19.2626 12 22.001C9.49872 19.2626 8.07725 15.7089 8 12.001C8.07725 8.29301 9.49872 4.73933 12 2.00098Z" stroke="#0B0D14" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>  
+                        </div>
+                        <div class="other-items-wrapper arrow">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 22.001C17.5228 22.001 22 17.5238 22 12.001C22 6.47813 17.5228 2.00098 12 2.00098C6.47715 2.00098 2 6.47813 2 12.001C2 17.5238 6.47715 22.001 12 22.001Z" stroke="#0B0D14" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 13.501L12 9.50098L8 13.501" stroke="#0B0D14" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                </summary>
+                <div class="expandable-view">
+                    <div class="product-items-seperator"></div>
+                    <div class="expandable-view-inner">
+                        The best customer experiences are built with Zendesk. Our customer service and engagement products are powerful and flexible, and scale to meet the needs of any business. Zendesk serves over 165,000 businesses across hundreds of industries and all company sizes, offering service and support in over 60 languages.
+                    </div>
+                </div>
+            </details>
+            <div class="product-items-seperator" x-show="index !== filteredProducts.length - 1"></div>
+        </div>
+        </template>
+    </section>
+    <footer class="footer-container container">
+        <img fetchpriority="high" width="100" height="36" src="assets/images/company-logo.png" alt="company logo">
+        <div class="footer-description">Zipper is a product discovery platform that helps businesses find the best software solutions for their needs. With a comprehensive database of over 10,000 products, Zipper provides detailed information, reviews, and comparisons to help users make informed decisions.</div>
+        <div class="footer-copyright">© 2024 Zipper. All rights reserved.</div>
+    </footer>
+    <script src="assets/javascript/alpine.js" defer></script>
+    <script>
+        function zipperApp() {
+            return {
+            searchQuery: '',
+            selectedCategory: '',
+            selectedService: '',
+            selectedBudget: '',
+            loading: false,
+
+            categories: ['CRM, Customer Service & Sales', 'File Syncing, Storage & Sharing Platform', 'Project Management'],
+            services: ['Customer Support', 'Data Storage', 'Analytics'],
+            budgets: ['$0 - $49', '$50 - $199', '$200+'],
+
+            allProducts: [
+                {
+                name: 'Zendesk',
+                category: 'CRM, Customer Service & Sales',
+                service: 'Customer Support',
+                budget: '$0 - $49',
+                price: '$1 - $49 / Month',
+                image: 'assets/images/zendesk.png',
+                description: 'Zendesk offers customer service and engagement products serving over 165,000 businesses worldwide.'
+                },
+                {
+                name: 'Dropbox',
+                category: 'File Syncing, Storage & Sharing Platform',
+                service: 'Data Storage',
+                budget: '$0 - $49',
+                price: '$12 - $49 / Month',
+                image: 'assets/images/dropbox.png',
+                description: 'Dropbox helps teams store, sync, and share files securely across devices with reliable cloud storage.'
+                },
+                {
+                name: 'Asana',
+                category: 'Project Management',
+                service: 'Analytics',
+                budget: '$50 - $199',
+                price: '$50 - $79 / Month',
+                image: 'assets/images/asana.png',
+                description: 'HubSpot offers inbound marketing, sales, and CRM software to help companies grow better.'
+                }
+            ],
+
+            filteredProducts: [],
+
+            init() {
+                this.filteredProducts = this.allProducts;
+                this.$nextTick(() => {
+                    document.addEventListener('click', (e) => {
+                    if (e.target.closest('.no-toggle')) {
+                        const summary = e.target.closest('summary');
+                        if (summary) {
+                        e.stopPropagation();
+                        e.preventDefault();
+                        }
+                    }
+                    }, true);
+                });
+            },
+
+            filterProducts() {
+                this.loading = true;
+                setTimeout(() => {
+                const query = this.searchQuery.toLowerCase();
+                this.filteredProducts = this.allProducts.filter(p => {
+                    const matchesQuery = p.name.toLowerCase().includes(query)
+                    || p.category.toLowerCase().includes(query)
+                    || p.service.toLowerCase().includes(query);
+                    const matchesCategory = !this.selectedCategory || p.category === this.selectedCategory;
+                    const matchesService = !this.selectedService || p.service === this.selectedService;
+                    const matchesBudget = !this.selectedBudget || p.budget === this.selectedBudget;
+                    return matchesQuery && matchesCategory && matchesService && matchesBudget;
+                });
+                this.loading = false;
+                }, 500); // simulate loading
+            }
+            };
+        }
+
+        // read more functionality
+        document.addEventListener("DOMContentLoaded", () => {
+        const maxChars = 200;
+        const elements = document.querySelectorAll(".expandable-view-inner");
+
+        elements.forEach((el) => {
+        const fullText = el.textContent.trim();
+
+        if (fullText.length > maxChars) {
+            const shortText = fullText.substring(0, maxChars) + "...";
+            const toggle = document.createElement("span");
+            toggle.classList.add("read-toggle");
+            toggle.textContent = "Read more";
+
+            // wrap original text
+            const contentSpan = document.createElement("span");
+            contentSpan.textContent = shortText;
+            el.textContent = "";
+            el.appendChild(contentSpan);
+            el.appendChild(toggle);
+
+                toggle.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    const isExpanded = el.classList.toggle("expanded");
+
+                    if (isExpanded) {
+                    contentSpan.textContent = fullText;
+                    toggle.textContent = "Read less";
+                    } else {
+                    contentSpan.textContent = shortText;
+                    toggle.textContent = "Read more";
+                    }
+                });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
