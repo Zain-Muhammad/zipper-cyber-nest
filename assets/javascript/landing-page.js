@@ -127,3 +127,10 @@ if (fullText.length > maxChars) {
         }
     });
 });
+
+// navbar js
+document.querySelectorAll('.nav-links a').forEach(anchor => {
+    anchor.addEventListener('click', () => {
+        document.getElementById('menu-btn').checked = false;
+    });
+});
