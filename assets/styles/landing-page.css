@@ -446,6 +446,3 @@ select.zipper-filter {
         margin: 0;
     }
 }
-[x-cloak] {
-    display: none !important;
-}
