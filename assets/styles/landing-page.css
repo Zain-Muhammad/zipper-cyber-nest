@@ -30,7 +30,7 @@ html{
     background: #0B0D14;
     color: #FFFFFF;
     padding: 40px 16px;
-    height: 40vh;
+    /* height: 340px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
