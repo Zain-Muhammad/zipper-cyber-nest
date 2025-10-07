@@ -4,11 +4,15 @@ function zipperApp() {
     selectedCategory: '',
     selectedService: '',
     selectedBudget: '',
+    selectedRated: '',
+    selectedIndustry: '',
     loading: false,
 
     categories: ['CRM, Customer Service & Sales', 'File Syncing, Storage & Sharing Platform', 'Project Management'],
     services: ['Customer Support', 'Data Storage', 'Analytics'],
     budgets: ['$0 - $49', '$50 - $199', '$200+'],
+    rateds: ['4.4', '5.2', '4.1', '3.2'],
+    industries: ['Technology', 'Healthcare', 'Finance'],
 
     allProducts: [
         {
@@ -17,6 +21,9 @@ function zipperApp() {
         service: 'Customer Support',
         budget: '$0 - $49',
         price: '$1 - $49 / Month',
+        rating: '4.4',
+        reviews: '4.6k Reviews',
+        industry: 'Technology',
         image: 'assets/images/zendesk.png',
         description: 'Zendesk offers customer service and engagement products serving over 165,000 businesses worldwide.'
         },
@@ -26,6 +33,9 @@ function zipperApp() {
         service: 'Data Storage',
         budget: '$0 - $49',
         price: '$12 - $49 / Month',
+        rating: '5.2',
+        reviews: '3.2k Reviews',
+        industry: 'Technology',
         image: 'assets/images/dropbox.png',
         description: 'Dropbox helps teams store, sync, and share files securely across devices with reliable cloud storage.'
         },
@@ -35,8 +45,11 @@ function zipperApp() {
         service: 'Analytics',
         budget: '$50 - $199',
         price: '$50 - $79 / Month',
+        rating: '4.1',
+        reviews: '2.1k Reviews',
+        industry: 'Finance',
         image: 'assets/images/asana.png',
-        description: 'HubSpot offers inbound marketing, sales, and CRM software to help companies grow better.'
+        description: 'Asana offers inbound marketing, sales, and CRM software to help companies grow better.'
         }
     ],
 
@@ -68,7 +81,9 @@ function zipperApp() {
             const matchesCategory = !this.selectedCategory || p.category === this.selectedCategory;
             const matchesService = !this.selectedService || p.service === this.selectedService;
             const matchesBudget = !this.selectedBudget || p.budget === this.selectedBudget;
-            return matchesQuery && matchesCategory && matchesService && matchesBudget;
+            const matchesRated = !this.selectedRated || p.rating >= parseFloat(this.selectedRated);
+            const matchesIndustry = !this.selectedIndustry || p.industry === this.selectedIndustry;
+            return matchesQuery && matchesCategory && matchesService && matchesBudget && matchesRated && matchesIndustry;
         });
         this.loading = false;
         }, 500); // simulate loading

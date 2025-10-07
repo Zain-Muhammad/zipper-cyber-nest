@@ -50,25 +50,25 @@
                                 </svg>
                             </header>
                             <ul class="mega-links">
-                                <li><a href="/">Zendesk</a></li>
-                                <li><a href="/">Dropbox</a></li>
-                                <li><a href="/">Asana</a></li>
+                                <li><a href="#product-list">Zendesk</a></li>
+                                <li><a href="#product-list">Dropbox</a></li>
+                                <li><a href="#product-list">Asana</a></li>
                             </ul>
                             </div>
                         </div>
                         </div>
                     </li>
                     <li>
-                        <a href="/" class="updates">Updates
+                        <a href="#product-list" class="updates">Updates
                             <div class="pulse"></div>
                         </a>
                     </li>
-                    <li><a href="/">Resources</a></li>
-                    <li><a href="/">About us</a></li>
+                    <li><a href="#product-list">Resources</a></li>
+                    <li><a href="#product-list">About us</a></li>
                     </ul>
                     <ul class="nav-links login-signup-btns">
-                        <li><a href="/" class="login-btn">Login</a></li>
-                        <li><a href="/" class="signup-btn">Sign Up</a></li>
+                        <li><a href="#product-list" class="login-btn">Login</a></li>
+                        <li><a href="#product-list" class="signup-btn">Sign Up</a></li>
                     </ul>
                 </div>
                 <ul class="nav-links">
@@ -124,20 +124,22 @@
                     <option x-text="b"></option>
                 </template>
             </select>
-            <select class="zipper-filter">
-                <option  value="">Rated</option>
-                <option  value="1">Rated 1</option>
-                <option  value="2">Rated 2</option>
+            <select class="zipper-filter" x-model="selectedRated" @change="filterProducts">
+                <option value="">Rated</option>
+                <template x-for="r in rateds" :key="r">
+                    <option x-text="r"></option>
+                </template>
             </select>
-            <select class="zipper-filter">
-                <option  value="">Industry</option>
-                <option  value="1">Industry 1</option>
-                <option  value="2">Industry 2</option>
+            <select class="zipper-filter" x-model="selectedIndustry" @change="filterProducts">
+                <option value="">Industry</option>
+                <template x-for="ind in industries" :key="ind">
+                    <option x-text="ind"></option>
+                </template>
             </select>
         </div>
     </section>
     <!-- Product List -->
-    <section class="products-list container">
+    <section class="products-list container" id="product-list">
         <!-- Loader -->
         <template x-if="loading">
         <div class="spinner"></div>
@@ -164,11 +166,9 @@
                                 <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M9.00033 14.275L4.85033 16.775C4.667 16.8916 4.47533 16.9416 4.27533 16.9249C4.07533 16.9083 3.90033 16.8416 3.75033 16.725C3.60033 16.6083 3.48366 16.4623 3.40033 16.287C3.317 16.1116 3.30033 15.916 3.35033 15.7L4.45033 10.975L0.775329 7.79995C0.608662 7.64995 0.504662 7.47895 0.463329 7.28695C0.421996 7.09495 0.434329 6.90762 0.500329 6.72495C0.566996 6.54162 0.666995 6.39162 0.800329 6.27495C0.933662 6.15828 1.117 6.08328 1.35033 6.04995L6.20033 5.62495L8.07533 1.17495C8.15866 0.974952 8.288 0.824951 8.46333 0.724951C8.63866 0.624951 8.81766 0.574951 9.00033 0.574951C9.18366 0.574951 9.36266 0.624951 9.53733 0.724951C9.712 0.824951 9.84133 0.974952 9.92533 1.17495L11.8003 5.62495L16.6503 6.04995C16.8837 6.08328 17.067 6.15828 17.2003 6.27495C17.3337 6.39162 17.4337 6.54162 17.5003 6.72495C17.567 6.90829 17.5797 7.09595 17.5383 7.28795C17.497 7.47995 17.3927 7.65062 17.2253 7.79995L13.5503 10.975L14.6503 15.7C14.7003 15.9166 14.6837 16.1126 14.6003 16.288C14.517 16.4633 14.4003 16.609 14.2503 16.725C14.1003 16.8416 13.9253 16.9083 13.7253 16.9249C13.5253 16.9416 13.3337 16.8916 13.1503 16.775L9.00033 14.275Z" fill="#F3B146"/>
                                 </svg>
-                                <div class="rating-number">
-                                    4.4
+                                <div class="rating-number" x-text="product.rating">
                                 </div>
-                                <div class="rating-count">
-                                    3.6k Reviews
+                                <div class="rating-count" x-text="product.reviews">
                                 </div>
                             </div>
                         </div>
@@ -215,8 +215,8 @@
     <footer class="footer-container container">
         <img fetchpriority="high" width="100" height="36" src="assets/images/company-logo.png" alt="company logo">
         <div class="footer-description">Zipper is a product discovery platform that helps businesses find the best software solutions for their needs. With a comprehensive database of over 10,000 products, Zipper provides detailed information, reviews, and comparisons to help users make informed decisions.</div>
-        <div class="footer-copyright">Designed by Zain (Senior UX/UI Developer & Designer).</div>
-        <div class="footer-copyright">© 2024 Zipper. All rights reserved.</div>
+        <div class="footer-copyright designed-by">Designed by Zain (Senior Frontend Developer | UX/UI Lead).</div>
+        <div class="footer-copyright">© 2025 Zipper. All rights reserved.</div>
     </footer>
     <script src="assets/javascript/alpine.js" defer></script>
     <script src="assets/javascript/landing-page.js"></script>
