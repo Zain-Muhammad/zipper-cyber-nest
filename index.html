@@ -106,31 +106,31 @@
     <section class="popular-products container">
         <h2 class="popular-section-title">Popular Products</h2>
         <div class="filter-wrapper">
-            <select class="zipper-filter" x-model="selectedCategory" @change="filterProducts">
+            <select aria-label="Categories" class="zipper-filter" x-model="selectedCategory" @change="filterProducts">
                 <option value="">Categories</option>
                 <template x-for="cat in categories" :key="cat">
                     <option x-text="cat"></option>
                 </template>
             </select>
-            <select class="zipper-filter" x-model="selectedService" @change="filterProducts">
+            <select aria-label="Services" class="zipper-filter" x-model="selectedService" @change="filterProducts">
                 <option value="">Services</option>
                 <template x-for="srv in services" :key="srv">
                     <option x-text="srv"></option>
                 </template>
             </select>
-            <select class="zipper-filter" x-model="selectedBudget" @change="filterProducts">
+            <select aria-label="Budget" class="zipper-filter" x-model="selectedBudget" @change="filterProducts">
                 <option value="">Budget</option>
                 <template x-for="b in budgets" :key="b">
                     <option x-text="b"></option>
                 </template>
             </select>
-            <select class="zipper-filter" x-model="selectedRated" @change="filterProducts">
+            <select aria-label="Rated" class="zipper-filter" x-model="selectedRated" @change="filterProducts">
                 <option value="">Rated</option>
                 <template x-for="r in rateds" :key="r">
                     <option x-text="r"></option>
                 </template>
             </select>
-            <select class="zipper-filter" x-model="selectedIndustry" @change="filterProducts">
+            <select aria-label="Industry" class="zipper-filter" x-model="selectedIndustry" @change="filterProducts">
                 <option value="">Industry</option>
                 <template x-for="ind in industries" :key="ind">
                     <option x-text="ind"></option>
