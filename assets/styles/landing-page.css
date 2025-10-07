@@ -30,7 +30,7 @@ html{
     background: #0B0D14;
     color: #FFFFFF;
     padding: 40px 16px;
-    min-height: 40vh;
+    height: 40vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -45,7 +45,6 @@ html{
     text-align: center;
     margin: 0px;
     z-index: 1;
-    min-height: 130px;
 }
 .zipper-search {
     display: flex;
@@ -356,6 +355,8 @@ select.zipper-filter {
     }
     .hero {
         padding: 80px 16px;
+        min-height: 40vh;
+        height: auto;
     }
     .hero-title {
         font-size: 56px;
