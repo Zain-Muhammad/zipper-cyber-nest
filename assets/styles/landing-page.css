@@ -45,11 +45,12 @@ html{
     text-align: center;
     margin: 0px;
     z-index: 1;
+    min-height: 130px;
 }
 .zipper-search {
     display: flex;
     align-items: center;
-    column-gap: 12px;
+    column-gap: 4px;
     font-size: 14px;
     color: #46484B;
     padding:8px 8px 8px 16px;
@@ -70,6 +71,8 @@ html{
     flex-grow: 1;
     border: none;
     outline: none;
+    background: none;
+    font-size: 16px;
 }
 .zipper-search-button {
     background: #DCFD88;
@@ -359,6 +362,7 @@ select.zipper-filter {
         max-width: 668px;
     }
     .zipper-search {
+        column-gap: 12px;
         padding:8px 8px 8px 24px;
         min-width: 572px;
         margin-bottom: 24px;;
