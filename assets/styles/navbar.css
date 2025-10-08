@@ -31,7 +31,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1140px;
     width: 100%;
     margin: auto;
 }
@@ -330,6 +329,9 @@ display: none;
 }
 
 @media screen and (min-width: 992px) {
+    .nav-wrapper-inner{
+        padding: 0px 12px;
+    }
     .content .row .mega-links{
         display: flex;
         align-items: center;
